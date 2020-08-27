@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 9</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    * {
+        box-sizing: content-box;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+    #main {
+        width: 100%;
+        margin: 0;
+    }
+    .foot {
+        width: 100%;
+        background-color: gray;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: large;
+        height: 100px;
+    }
+    .pic {
+        width: 100%;
+        height: 800px;
+        background-color:lightblue;
+    }
+    #d0{
+        width: 48.5%;
+        height: 600px;
+        background-color: lightslategray;
+        float: left;
+        margin-left: 1%;
+        margin-right: 1%;
+        overflow: hidden;
+    }
+    #d {
+        width: 48.5%;
+        height: 600px;
+        float:right;
+        margin-right: 1%;
+        display: flex;
+        flex-direction: column;
+    }
+    #d1, #d2, #d3 {
+        background-color: rgba(165, 77, 42, 0.836);
+        width: 100%;
+        height: 197px;
+        margin: 0px;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+    }
+    #rec img {
+        width: 94%;
+        height: 45%;
+        margin: 3%;
+        display: block;
+    }
+    #rec a {
+        color: white;
+        width: 100%;
+        border-radius: 5px;
+        background-color: red;
+        display: block;
+        padding: 10px 0;
+        text-align: center; 
+        text-decoration: none;
+        position: absolute;
+        bottom: 0;
+    }
+    #rec a:hover {
+        background-color: blue;
+    }
+    #rec {
+        display: flex; 
+        height: 30vw; 
+        width: 97vw; 
+        margin: auto;
+        flex-direction: row;
+    }
+    #cir {
+        display: flex;
+        flex-direction: row;
+        width: 100%; 
+        height: 22vw;
+        align-items: center;
+    }
+    #c1, #c2 { 
+        height: 22vw; 
+        margin-bottom: 5vw;
+        width: 49%;
+    }
+    #r1 {
+        float: left;
+        display: flex;
+        flex-direction: row;
+        width: 48.5vw;
+    }
+    #r2 {
+        float: right;
+        display: flex;
+        flex-direction: row;
+        width: 48.5vw;
+    }
+    #c1 {
+        float: left;
+        display: flex;
+        flex-direction: row;
+    }
+    #c2 {
+        float: right;
+        display: flex;
+        flex-direction: row;
+    }
+    .cir1, .cir2, .cir3, .cir4 {
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: darkgoldenrod;
+        float: left; 
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .rec1, .rec2, .rec3, .rec4 {
+        width: 50vw;
+        height: 100%;
+        background-color:lightgray;
+        margin: 0px 1vw;
+        position: relative; 
+        overflow: hidden;
+    }
+    .list {
+        background-color: grey;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 8px;
+        display: inline-block;
+        position: sticky;
+        z-index: 3;
+        top: 0;
+        left: 5px;
+        right: 5px;
+    }
+    .list ul{
+        float: right;
+        list-style: none;
+    }
+    .list a{
+            color: white;
+            text-decoration: none;
+            font-size: 21px;
+            padding: 5px 5px;   
+            text-transform: uppercase;   
+        }
+    .list a:hover {
+        background-color: white;
+        color: black;
+        transition: .7s;
+    }
+    .show, .hide {
+        font-size: 25px;
+        padding: 15px 15px;
+    }
+    .show {    
+        float: right;   
+    }
+    #check {    
+        display: none; 
+    }
+    .show:hover, .hide:hover {  
+        color: aqua;  
+        transition: .7s; 
+    }
+
+    @media (min-width: 855px ) {
+        .list li {
+            display: inline-block;
+            color: white;
+            list-style: none;
+            padding: 15px 15px;              
+        }
+        .show, .hide {   
+            display: none;
+        }
+    } 
+    
+    @media (max-width: 1190px) {
+        #rec { 
+            flex-direction: column;
+            height: 101vw;
+            align-items: center;
+        }
+        #r1, #r2 {  
+            width: 90vw;
+            }
+        #cir {
+            width: 100%;
+            flex-direction: column;
+            height: 65vw;
+            align-items: center;
+        }
+        #r1 {
+            margin-bottom: 30px;
+        }
+        #c1, .cir2 {
+            margin-bottom: 40px;
+        }
+        #c1, #c2 {
+            height: 31vw;
+            width: 81vw;
+        }
+        .cir1, .cir2, .cir3, .cir4 {
+            width: 100%;
+            margin: 0 5vw 0 5vw;
+        }
+        .rec1, .rec2, .rec3, .rec4 {
+            width: 52vw;
+            height: 50vw;
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+    }
+    @media (max-width: 855px) {
+        .hide, ul a {    
+            color: white;   
+        }
+        ul {   
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            background-color: slategrey;
+            position: fixed;
+            top: 0px;
+            right: -100%;
+            list-style: none;
+            transition: .7s;
+            }
+        ul li {
+            color: white;
+            padding: 30px 0;
+        }
+        .show {    
+            display: block; 
+        }
+        .hide {
+            position: absolute;
+            top: 1px;
+            right: 10px;
+        }
+        #check:checked ~ ul {     
+            right: 0;  
+        }
+        #m {     
+            flex-direction: column;
+            }
+        #d0 {    
+            width: 100%;
+            margin: 0 0 10px 0; 
+            }
+        #d {    
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 640px) {
+        #rec {
+            height: 314vw;
+            width: 70vw;
+            flex-direction: column;
+            clear: both;
+        }
+        #r1, #r2 {
+            width: 100%;
+            flex-direction: column;
+            clear: both;
+            margin-bottom: 0;
+        }
+        .rec1, .rec2, .rec3, .rec4 {
+            width: 100%;
+            height: 79vw;
+            margin-bottom: 3vw;
+        }
+
+        #cir {
+            width: 97vw;
+            flex-direction: column;
+            height: 234vw;
+        }
+        #c1, #c2 {
+            flex-direction: column;
+            width: 75%;
+            height: 116vw;
+            margin-left: 7.5%;
+        }
+        .cir1, .cir2, .cir3, .cir4 {
+            height: 57vw;
+            width: 80%;
+            margin-bottom: 2vw;
+        }
+        .foot {     
+            font-size: medium;
+        }
+    }
+    
+</style>
+</head>
+<body>
+    <a name="top">
+
+    <div class="list"></a>
+        <input type="checkbox" id="check">
+        <label for="check" class="show">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+            <li ><a href="#"><i class="fa fa-home" style="padding-right: 10px;"></i>HOME</a></li>
+            <li><a href="#about_us"><i class="fa fa-user-circle" style="padding-right: 10px;"></i>ABOUT US</a></li>
+            <li><a href="#team"><i class="fa fa-users" style="padding-right: 10px;"></i>TEAM</a></li>
+            <li><a href="#techno"><i class="fa fa-cogs" style="padding-right: 10px;"></i>TECHNOLOGIES</a></li>
+            <li><a href="#contact"><i class="fa fa-phone-square" style="padding-right: 10px;"></i>CONTACT</a></li>
+            <label for="check" class="hide">
+                <i class="fa fa-times"></i>
+            </label>
+        </ul>
+    </div>
+
+    <div id="main">
+
+        <div class="pic" style="position: relative; z-index: 1;">
+            <img src="https://github.com/0124hitesh/Temp/blob/master/img/prac8.jpg?raw=true" alt="Practical 9">
+            <p style="position: absolute;left: 20px; top: 10px; color: white; font-size: xxx-large; margin: 0px;"><b>PRACTICAL - 9</b></p>
+        </div>
+        
+        <a name="team"></a>
+        <br><br><br><br>
+        <h1 style="text-align: center;"><b>Team Members</b></h1>
+        <br><br><br>
+
+
+        <div id="cir">
+            <div id="c1">
+                <div class="cir1"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team1.png?raw=true" alt="Member-1"></div>
+                <div class="cir2"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team2.png?raw=true" alt="Member-2"></div>
+            </div>
+
+            <div id="c2">
+                <div class="cir3"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team3.png?raw=true" alt="Member-3"></div>
+                <div class="cir4"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team4.png?raw=true" alt="Member-4"></div>
+            </div>
+        </div>
+
+        <a name="about_us"></a>
+        <br><br><br><br>
+        <h1 style="text-align: center;"><b>About Us</b></h1>
+        <br><br>
+
+        <div id="m" style="display: flex;">
+            <div id="d0">
+                <h1 style="padding: 12px 8px 0px 8px; color: white;">About Projects</h1>
+                <p style="font-size: x-large; text-align: justify; padding: 12px 8px; color: white;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus laborum asperiores quam facilis corporis obcaecati 
+                    delectus non commodi perspiciatis animi, labore distinctio quod, alias nesciunt odio ratione inventore. Magni repellendus 
+                    nesciunt obcaecati laboriosam iste quam, recusandae distinctio adipisci doloremque neque repudiandae dolores illum 
+                    accusamus quod maiores eaque dignissimos ullam totam quisquam! Nostrum expedita atque, corporis earum beatae qui 
+                    reprehenderit quam ea cum aspernatur aperiam minus rem repellat nulla est consequuntur ipsam pariatur nemo veniam facilis 
+                    sit velit! Placeat blanditiis odit harum ratione delectus nesciunt. Porro placeat suscipit quae praesentium? Exercitationem 
+                    molestias vero quidem adipisci esse quia nulla omnis facere et quae dignissimos odit aperiam perferendis dolor blanditiis 
+                    impedit, quibusdam accusamus! Eius minus dolore labore. Eum aut nisi excepturi aliquid incidunt, ab quas! Ea laborum error 
+                    dolore facere vero exercitationem totam velit perspiciatis? Assumenda maxime debitis veritatis ullam, neque atque sed 
+                    consectetur quam asperiores itaque quos, odio officia, ipsam suscipit similique.
+                </p>
+            </div>
+            <div id="d">
+                <div id="d1" style="margin-bottom: 4.5px; position: relative;">
+                    <h1 style="position: absolute; left: 40%; margin: 0px;"><b>Project-1</b></h1>
+                    <img src="https://jaisharma18.github.io/Assignments/img/p1.jpg" alt="img">                   
+                </div>
+                <div id="d2" style="margin-bottom: 4.5px; position: relative;">
+                    <h1 style="position: absolute; left: 40%; margin: 0px;"><b>Project-2</b></h1>
+                    <img src="https://jaisharma18.github.io/Assignments/img/p2.jpeg" alt="img">
+                </div>
+                <div id="d3" style="position: relative;">
+                    <h1 style="position: absolute; left: 40%; margin: 0px;"><b>Project-3</b></h1>
+                    <img src="https://jaisharma18.github.io/Assignments/img/p3.jpg" alt="img">
+                </div>
+            </div>
+        </div>
+
+        <a name="techno"></a>
+        <br><br><br><br>
+        <h1 style="text-align: center;"><b>Technologies Used</b></h1>
+        <br><br>
+
+        <div id="rec">
+            <div id="r1">
+                <div class="rec1">
+                    <img src="https://jaisharma18.github.io/Assignments/img/html.png" alt="HTML Image">
+                    <h3 style="text-align: center;">Introduction to HTML</h3>
+                    <p style="color: white; text-align: justify; margin: 15px; font-size: large;">
+                        Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web 
+                        browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as 
+                        JavaScript.
+                    </p>
+                    <a href = "https://jaisharma18.github.io/Assignments/HTML_5.htm">Read More</a>
+                </div>
+                <div class="rec2">
+                    <img src="https://jaisharma18.github.io/Assignments/img/cssimage.png" alt="CSS Image">
+                    <h3 style="text-align: center;">Introduction to CSS</h3>
+                    <p style="color: white; text-align: justify; margin: 15px; font-size: large;">
+                        Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written 
+                        in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+                    </p>
+                    <a href = "https://jaisharma18.github.io/Assignments/CSS.htm">Read More</a>
+                </div>
+            </div>
+
+            <div id="r2">
+                <div class="rec3">
+                    <img src="https://jaisharma18.github.io/Assignments/img/js.jpg" alt="JS Image">
+                    <h3 style="text-align: center;">Introduction to JavaScript</h3>
+                    <p style="color: white; text-align: justify; margin: 15px; font-size: large;">
+                        JavaScript supports much of the structured programming syntax from C (e.g., if statements, while loops, switch 
+                        statements, do while loops, etc.). One partial exception is scoping: JavaScript originally had only function 
+                        scoping with var. ECMAScript 2015 
+                    </p>
+                    <a href = "https://jaisharma18.github.io/Assignments/JS.htm">Read More</a>
+                </div>
+                <div class="rec4">
+                    <img src="https://jaisharma18.github.io/Assignments/img/bootstrap.jpg" alt="Bootstrap Image">
+                    <h3 style="text-align: center;">Introduction to Bootstrap</h3>
+                    <p style="color: white; text-align: justify; margin: 15px; font-size: large;">
+                        Bootstrap is a web framework that focuses on simplifying the development of informative web pages (as opposed 
+                        to web apps). The primary purpose of adding it to a web project is to apply Bootstrap's choices of color, size, 
+                        font and layout to that project.
+                    </p>
+                    <a href = "https://jaisharma18.github.io/Assignments/Bootstrap.htm">Read More</a>
+                </div>
+            </div>    
+        </div>
+
+        <a name="contact"></a>
+        <br><br><br>
+        <h1 style="text-align: center;"><b>Contact</b></h1>
+        <br>
+
+        <div class="foot" style="background-color: plum; margin-top: 0px; text-align: center">
+                <br>
+                Website template for Practical-9 © <a href="https://www.beta-labs.in/">Beta-labs</a>
+                <br><br>
+                <a href="#top">Back to top</a>
+        </div>
+    </div>
+</body>
+</html>
