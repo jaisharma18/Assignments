@@ -90,7 +90,7 @@
             justify-content: space-evenly;
             align-items: center;
             color: white;
-            margin-top: 230px;
+            margin-top: 210px;
             padding: 0 15px;
         }
         .icons a {
@@ -120,6 +120,7 @@
 
         #check:checked ~ .show {     
             z-index:  -1; 
+            transition: .7s;
         } 
 
         #check:checked ~ .hide {
@@ -127,9 +128,10 @@
             transition: .7s; 
         }
 
-        #check:checked ~ .con {
+        #check:checked ~ #con {
             width: 75%;
             float: right;
+            margin-top: 80px;
         }
 
         @media (max-width: 985px){
