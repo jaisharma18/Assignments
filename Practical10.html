@@ -144,7 +144,11 @@
                 justify-content: center;
                 align-items: center;
             }
-            
+            #check:checked ~ #con {
+                width: 60%;
+                float: right;
+                margin-top: 80px;
+            }
         }
 
         @media (max-width: 850px) {
@@ -156,6 +160,11 @@
         @media (max-width: 635px) {
             .list{
                 width: 60%;
+            }
+            #check:checked ~ #con {
+                width: 40%;
+                float: right;
+                margin-top: 80px;
             }
         } 
 
