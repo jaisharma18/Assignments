@@ -17,37 +17,56 @@
 
         a {
             text-decoration: none;
+            color: darkslategray;
         }
 
         a:hover, acronym:hover {
             color: hotpink;
         }
-        
-        /* th,td,tr {
-            border-collapse: collapse;
-        }  */
 
         table {
-            margin: 80px auto;
-            border-radius: 10px;
-            border-collapse: collapse; 
+            margin: 30px auto;
+            border-spacing: 0;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px; 
         }
+
         td,tr,th {
-            padding: 10px;
+            padding: 15px;
         }
+
         td {
             text-align: left;
             font-size: 20px;
         }
+
         th {
             text-align: left;
             font-style: bold;
             font-size: 25px;
         }
+
+        tr:hover {
+            background-color: aqua;
+            transition: .8s;
+        }
+
+        caption {
+            font-size: 35px;
+            padding: 6px 0;
+            font-style: italic;
+            color: crimson;
+            background-color: lime;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
     </style>
 </head>
 <body>
-    <table border="5">
+    <table border="10" style="border-color: blue;">
+        <caption>
+            Full Stack Live Practical Book
+        </caption>
         <tr>
             <th>#</th>
             <th>Practical Name</th>
