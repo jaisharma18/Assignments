@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical - 12</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url("https://jaisharma18.github.io/Industrial-Training/img/background-1014963_640.jpg");
+        }
+
+        table {
+            margin: 10px auto;
+            border: 5px solid white;
+            background-color: white;
+        }
+
+        table tr:nth-child(even) {  
+            background-color: rgb(195, 213, 236);  
+        }  
+
+        td {
+            width: 205px;
+        }
+
+        table #body td {
+            font-size: 22px;
+            padding: 12px 35px;
+            text-align: center;
+        }
+
+        table #top td {
+            font-size: xx-large;
+            padding: 11px 35px;
+            text-align: center;
+        }
+
+        table #foot td {
+            height: 60px;
+        }
+
+        table #foot td a {
+            color: white;
+            text-transform: uppercase;
+            background-color: rgb(197, 56, 197);
+            padding: 8px 15px;
+            text-decoration: none;
+            display: block;
+            width: 80%;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 25px;
+            display: block;
+            margin: auto;
+        }
+
+        table #foot a:hover { 
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col style="background:rgb(146, 230, 230);">
+            <col style="background: rgb(152, 216, 152);">
+            <col style="background: rgb(172, 172, 240);">
+            <col style="background:rgb(241, 207, 143);">
+          </colgroup>
+        <thead style="background-color: whitesmoke;">
+            <tr>
+              <td colspan="4" style="text-align: center; font-size: xx-large; text-transform: uppercase;">select your plan</td>
+            </tr>
+          </thead>
+        <tr id="top" style="color: rgb(0, 7, 112);">
+                <td><i class="fa fa-building" style="padding-right: 10px;"></i>Basic</td>
+                <td><i class="fa fa-telegram" style="padding-right: 10px;"></i>Plus</td>
+                <td><i class="fa fa-telegram" style="padding-right: 10px;"></i>Deluxe</td>
+                <td><i class="fa fa-telegram" style="padding-right: 10px;"></i>Pro</td>
+        </tr>
+        <tbody id="body">
+            <tr style="color: rgb(202, 0, 0);">
+                <td>Rs. 500/-</td>
+                <td>Rs. 1500/-</td>
+                <td>Rs. 2500/-</td>
+                <td>Rs. 3500/-</td>
+            </tr>
+            <tr>
+                <td>50 Pages</td>
+                <td>100 Pages</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>3 Users</td>
+                <td>5 Users</td>
+                <td>10 Users</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>10 Sites</td>
+                <td>50 Sites</td>
+                <td>100 Sites</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>50 MB</td>
+                <td>350 MB</td>
+                <td>1 GB</td>
+                <td>5 GB</td>
+            </tr>
+            <tr>
+                <td>included</td>
+                <td>included</td>
+                <td>included</td>
+                <td>included</td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times" aria-hidden="true" style="color: red;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times" aria-hidden="true" style="color: red;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times" aria-hidden="true" style="color: red;"></i></td>
+                <td><i class="fa fa-times" aria-hidden="true" style="color: red;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times" aria-hidden="true" style="color: red;"></i></td>
+                <td><i class="fa fa-times" aria-hidden="true" style="color: red;"></i></td>
+                <td><i class="fa fa-times" aria-hidden="true" style="color: red;"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true" style="color: green;"></i></td>
+            </tr>
+        </tbody>
+        <tr id="foot">
+            <td><a href="#">sign up</a></td>
+            <td><a href="#">sign up</a></td>
+            <td><a href="#">sign up</a></td>
+            <td><a href="#">sign up</a></td>
+        </tr>
+    </table>
+</body>
+</html>
