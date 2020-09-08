@@ -19,9 +19,18 @@
             margin: 10px auto;
             border: 5px solid white;
             background-color: white;
+            border-collapse: collapse;
         }
 
-        table tr:nth-child(even) {  
+        thead tr td {
+            background-color: rgb(246, 238, 225);
+        }
+
+        thead tr td {
+            padding: 5px;
+        }
+
+        table tr:nth-child(odd) {  
             background-color: rgb(195, 213, 236);  
         }  
 
@@ -37,12 +46,13 @@
 
         table #top td {
             font-size: xx-large;
-            padding: 11px 35px;
+            padding: 17px 35px;
             text-align: center;
         }
 
         table #foot td {
-            height: 60px;
+            height: 70px;
+            background-color: rgb(146, 230, 230);
         }
 
         table #foot td a {
@@ -68,21 +78,21 @@
 <body>
     <table>
         <colgroup>
-            <col style="background:rgb(146, 230, 230);">
-            <col style="background: rgb(152, 216, 152);">
-            <col style="background: rgb(172, 172, 240);">
-            <col style="background:rgb(241, 207, 143);">
+            <col style="background:rgb(146, 230, 230); border: 7px solid white;">
+            <col style="background: rgb(152, 216, 152); border: 7px solid white;">
+            <col style="background: rgb(172, 172, 240); border: 7px solid white;">
+            <col style="background:rgb(241, 207, 143); border: 7px solid white;">
           </colgroup>
-        <thead style="background-color: whitesmoke;">
+        <thead style="border: 5px solid white;">
             <tr>
-              <td colspan="4" style="text-align: center; font-size: xx-large; text-transform: uppercase;">select your plan</td>
+              <td colspan="4" style="text-align: center; font-size: 30px; text-transform: uppercase;"><b>select your plan</b></td>
             </tr>
           </thead>
         <tr id="top" style="color: rgb(0, 7, 112);">
-                <td><i class="fa fa-building" style="padding-right: 10px;"></i>Basic</td>
-                <td><i class="fa fa-telegram" style="padding-right: 10px;"></i>Plus</td>
-                <td><i class="fa fa-telegram" style="padding-right: 10px;"></i>Deluxe</td>
-                <td><i class="fa fa-telegram" style="padding-right: 10px;"></i>Pro</td>
+                <td style="background-color: rgb(146, 230, 230);"><b><i class="fa fa-building" style="padding-right: 10px;"></i>Basic</b></td>
+                <td style="background: rgb(152, 216, 152);"><b><i class="fa fa-telegram" style="padding-right: 10px;"></i>Plus</b></td>
+                <td style="background: rgb(172, 172, 240);"><b><i class="fa fa-telegram" style="padding-right: 10px;"></i>Deluxe</b></td>
+                <td style="background:rgb(241, 207, 143);"><b><i class="fa fa-telegram" style="padding-right: 10px;"></i>Pro</b></td>
         </tr>
         <tbody id="body">
             <tr style="color: rgb(202, 0, 0);">
