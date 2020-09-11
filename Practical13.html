@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical - 13</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0 40px 0;
+            font-size: 60px;
+        }  
+
+        footer {
+            background-color: darkslategrey;
+            margin: 5px 10px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        article {
+            height: 220px;
+        }
+
+        article #about {
+            width: 40%;
+            float: left;
+            margin-right: 5%;
+        }
+
+        article #categ {
+            width: 12%;
+            float: left;
+            margin-right: 3%;
+        }
+
+        article #links {
+            width: 17%;
+            float: left;
+        }
+
+        article #contact {
+            width: 23%;
+            float: left;
+        }
+
+        ul li {
+            list-style: none;
+            font-size: 20px;
+        }
+
+        #sign {
+            height: 65px;
+            padding: 20px 0 20px 0;
+            text-align: center;
+        }
+
+        #sign p {
+            font-size: x-large;
+        }
+
+        #sign a {
+            font-size: xx-large;
+            background-color: red;
+            border-radius: 20px;
+            text-decoration: none;
+            color: aqua;
+            font-size: 27px;
+            padding: 5px;
+        }
+
+        #sign a:hover {
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+
+        #foot {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            display: inline-block;
+            padding-right: 10px;
+        }
+
+        nav a {
+            font-size: xx-large;
+            background-color: slategrey;
+            border-radius: 50%;
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+            padding: 10px 15px 10px 10px;
+        }
+
+        nav a:hover {
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <b><p><span style="color: blue;">Responsive</span><span style="color: red; padding-left: 75px;">Footer</span></p></b>
+    <footer>
+        <article>
+            <section id="about">
+                <h2>ABOUT</h2>
+                <p style="text-align: justify; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam vero 
+                    inventore veniam architecto aspernatur nulla nam praesentium expedita, voluptatem deleniti et doloribus. Temporibus 
+                    voluptatum officia reiciendis vero laboriosam. Vel,debitis atque! Pariatur doloremque tempore veniam sapiente! Maiores, 
+                    saepe voluptates! Voluptatum architecto rerum voluptatem</p>
+            </section>
+            <section id="categ">
+                <h2>CATEGORIES</h2>
+                <ul>
+                    <li>C</li>
+                    <li>UI Design</li>
+                    <li>PHP</li>
+                    <li>Java</li>
+                    <li>Android</li>
+                    <li>Hybrid Apps</li>
+                </ul>
+            </section>
+            <section id="links">
+                <h2>QUICK LINKS</h2>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Contribute</li>
+                    <li>Privacy Policy</li>
+                    <li>Sitemap</li>
+                    <li>Disclaimer</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>CONTACT</h2>
+                <ul>
+                    <li><i class="fa fa-home" style="padding-right: 10px;"></i>SCO-75, Chandigarh, Punjab, India</li>
+                    <li><i class="fa fa-envelope-o"  style="padding-right: 10px;"></i>betalabsindia@gmail.com</li>
+                    <li><i class="fa fa-mobile"  style="padding-right: 10px;"></i>Mobile : 9729280731</li>
+                    <li><i class="fa fa-facebook-official"  style="padding-right: 10px;"></i>betalabsindia</li>
+                </ul>
+            </section>
+        </article>
+        <hr>
+        <section id="sign">
+            <p>Register for Free <a href="#">SIGN UP</a></p>
+        </section>
+        <hr>
+        <section id="foot">
+            <nav>
+                <a href="www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="www.google.com"><i class="fa fa-google" aria-hidden="true"></i></a>
+                <a href="www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="www.codepen.com"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+            </nav>
+        </section>
+    </footer>
+</body>
+</html>
