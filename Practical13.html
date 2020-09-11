@@ -28,7 +28,7 @@
         }
 
         article {
-            height: 220px;
+            height: 240px;
         }
 
         article #about {
@@ -109,10 +109,72 @@
             background-color: rgb(255, 255, 255);
             color: black;
         }
+
+        @media (max-width: 1170px) {
+            article #about {
+                width: 100%;
+                margin: 0;
+            }
+
+            article #about p {
+                margin: 0;
+            }
+
+            article #categ {
+                width: 20%;
+                float: left;
+                margin-right: 7%;
+            }
+
+            article #links {
+                width: 26%;
+                float: left;
+                margin-right: 7%;
+            }
+
+            article #contact {
+                width: 40%;
+                float: left;
+            }
+        }
+
+        @media (max-width: 680px) {
+            p {
+                text-align: center;
+                margin: 10px 0 15px;
+                font-size: 30px;
+            }
+
+            article #about {
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+
+            article #about p {
+                margin: 0;
+            }
+
+            article #categ {
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+
+            article #links {
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+
+            article #contact {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+        }
+
+        
     </style>
 </head>
 <body>
-    <b><p><span style="color: blue;">Responsive</span><span style="color: red; padding-left: 75px;">Footer</span></p></b>
+    <b><p><span style="color: blue;">Responsive</span><span style="color: red; padding-left: 35px;">Footer</span></p></b>
     <footer>
         <article>
             <section id="about">
