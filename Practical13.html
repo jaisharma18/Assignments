@@ -11,64 +11,79 @@
             padding: 0;
         }
 
-        p {
+        h1 {
             text-align: center;
             margin: 10px 0 40px 0;
-            font-size: 60px;
+            font-size: 6vw;
         }  
 
         footer {
             background-color: darkslategrey;
             margin: 5px 10px;
-            padding: 20px;
         }
 
         h2 {
             color: white;
+            margin-bottom: 5px;
         }
 
-        article {
-            height: 240px;
+        #sec1 {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
-        article #about {
+        #sec1 #about {
             width: 40%;
             float: left;
-            margin-right: 5%;
         }
 
-        article #categ {
-            width: 12%;
-            float: left;
-            margin-right: 3%;
-        }
+        #sec1 #about p {
+            text-align: justify;
+            font-size: 20px;
+        } 
 
-        article #links {
-            width: 17%;
+        #sec1 #categ {
             float: left;
         }
 
-        article #contact {
-            width: 23%;
+        #sec1 #links {
             float: left;
+        }
+
+        #sec1 #contact {
+            float: left;
+        }
+
+        #sec1 #contact a {
+            color: black;
+            text-decoration: none;
         }
 
         ul li {
             list-style: none;
             font-size: 20px;
+            margin-bottom: 3px;
         }
 
-        #sign {
-            height: 65px;
-            padding: 20px 0 20px 0;
-            text-align: center;
+        #categ li:hover, #links li:hover{
+            color: rgba(255, 166, 0, 0.561);
+            font-size: 20px;
         }
 
-        #sign p {
+        #sec2 {
+            height: 100px;;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #sec2 p {
             font-size: x-large;
         }
 
-        #sign a {
+        #sec2 a {
             font-size: xx-large;
             background-color: red;
             border-radius: 20px;
@@ -78,12 +93,12 @@
             padding: 5px;
         }
 
-        #sign a:hover {
+        #sec2 a:hover {
             background-color: rgb(255, 255, 255);
             color: black;
         }
 
-        #foot {
+        #sec3 {
             height: 100px;
             display: flex;
             justify-content: center;
@@ -91,144 +106,202 @@
         }
 
         nav {
-            display: inline-block;
-            padding-right: 10px;
+            display: inline-block; 
         }
 
         nav a {
-            font-size: xx-large;
             background-color: slategrey;
             border-radius: 50%;
             text-decoration: none;
             color: black;
-            font-size: 15px;
-            padding: 10px 15px 10px 10px;
+            font-size: 30px;
+            margin-left: 30px;
+            padding: 15px 20px 15px 15px;
         }
 
-        nav a:hover {
-            background-color: rgb(255, 255, 255);
-            color: black;
+        nav #f:hover {
+            background-color: #4467b3;
+            color: rgb(138, 138, 138);
         }
 
-        @media (max-width: 1170px) {
-            article #about {
+        nav #t:hover {
+            background-color: #55acee;
+            color: rgb(138, 138, 138);
+        }
+
+        nav #g:hover {
+            background-color: #dd4b39;
+            color: rgb(138, 138, 138);
+        }
+
+        nav #l:hover {
+            background-color: #0077B5;
+            color: rgb(138, 138, 138);
+        }
+
+        nav #c:hover {
+            background-color: #ea4c89;
+            color: rgb(138, 138, 138);
+        }
+
+        #sec4 {
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        #sec4 p {
+            font-size: 20px;
+            position: relative;
+            color: rgb(185, 178, 178);
+        }
+
+        #sec4 p::after{
+            content: '';
+            display: block;
+            width: 0;
+            background-color: rgb(51, 255, 0);
+            height: 2px;
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            transition: .7s;
+        }
+        #sec4 p:hover::after{
+            width: 100%;
+        }
+
+        @media (max-width: 1120px) {
+            #sec1 #about {
                 width: 100%;
-                margin: 0;
-            }
-
-            article #about p {
-                margin: 0;
-            }
-
-            article #categ {
-                width: 20%;
-                float: left;
-                margin-right: 7%;
-            }
-
-            article #links {
-                width: 26%;
-                float: left;
-                margin-right: 7%;
-            }
-
-            article #contact {
-                width: 40%;
-                float: left;
+                margin: 0 0 10px 0;
             }
         }
 
-        @media (max-width: 680px) {
-            p {
+        @media (max-width: 690px) {
+            h1 {
                 text-align: center;
                 margin: 10px 0 15px;
-                font-size: 30px;
+                font-size: 50px;
             }
 
-            article #about {
+            #sec1 #about {
                 width: 100%;
                 margin: 0 0 15px 0;
             }
 
-            article #about p {
+            #sec1 #about p {
                 margin: 0;
             }
 
-            article #categ {
+            #sec1 #categ {
                 width: 100%;
                 margin: 0 0 15px 0;
             }
 
-            article #links {
+            #sec1 #links {
                 width: 100%;
                 margin: 0 0 15px 0;
             }
 
-            article #contact {
+            #sec1 #contact {
                 width: 100%;
                 margin: 0 0 20px 0;
             }
-        }
+        } 
 
-        
+        @media (max-width: 500px) {
+            h1 {
+                text-align: center;
+                margin: 10px 0 15px 0;
+                font-size: 30px;
+            }
+
+            #sec3 nav a {
+                font-size: 30px;
+                margin-left: 10px;
+                padding: 15px 20px 15px 15px;
+            }
+
+            #sec4 p {
+                font-size: 15px;
+            }
+        }       
+
+        @media (max-width: 400px) {
+            #sec3 nav a {
+                font-size: 20px;
+                margin-left: 10px;
+                padding: 10px 15px 10px 10px;
+            }
+
+            #sec4 p {
+                font-size: 13px;
+            }
+        }    
     </style>
 </head>
 <body>
-    <b><p><span style="color: blue;">Responsive</span><span style="color: red; padding-left: 35px;">Footer</span></p></b>
+    <b><h1><span style="color: blue;">Responsive</span><span style="color: red; padding-left: 35px;">Footer</span></h1></b>
     <footer>
-        <article>
+        <section id="sec1">
             <section id="about">
                 <h2>ABOUT</h2>
-                <p style="text-align: justify; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam vero 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam vero 
                     inventore veniam architecto aspernatur nulla nam praesentium expedita, voluptatem deleniti et doloribus. Temporibus 
                     voluptatum officia reiciendis vero laboriosam. Vel,debitis atque! Pariatur doloremque tempore veniam sapiente! Maiores, 
-                    saepe voluptates! Voluptatum architecto rerum voluptatem</p>
+                    saepe voluptates! Voluptatum architecto rerum voluptatem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, dolore.</p>
             </section>
             <section id="categ">
                 <h2>CATEGORIES</h2>
                 <ul>
-                    <li>C</li>
-                    <li>UI Design</li>
-                    <li>PHP</li>
-                    <li>Java</li>
-                    <li>Android</li>
-                    <li>Hybrid Apps</li>
+                    <li><a href="#"></a>C</li>
+                    <li><a href="#"></a>UI Design</li>
+                    <li><a href="#"></a>PHP</li>
+                    <li><a href="#"></a>Java</li>
+                    <li><a href="#"></a>Android</li>
+                    <li><a href="#"></a>Hybrid Apps</li>
                 </ul>
             </section>
             <section id="links">
                 <h2>QUICK LINKS</h2>
                 <ul>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Contribute</li>
-                    <li>Privacy Policy</li>
-                    <li>Sitemap</li>
-                    <li>Disclaimer</li>
+                    <li><a href="#"></a>About Us</li>
+                    <li><a href="#"></a>Contact Us</li>
+                    <li><a href="#"></a>Contribute</li>
+                    <li><a href="#"></a>Privacy Policy</li>
+                    <li><a href="#"></a>Sitemap</li>
+                    <li><a href="#"></a>Disclaimer</li>
                 </ul>
             </section>
             <section id="contact">
                 <h2>CONTACT</h2>
                 <ul>
-                    <li><i class="fa fa-home" style="padding-right: 10px;"></i>SCO-75, Chandigarh, Punjab, India</li>
-                    <li><i class="fa fa-envelope-o"  style="padding-right: 10px;"></i>betalabsindia@gmail.com</li>
-                    <li><i class="fa fa-mobile"  style="padding-right: 10px;"></i>Mobile : 9729280731</li>
+                    <li><i class="fa fa-home" style="padding-right: 10px;"></i>180, Bharatpur, Rajasthan, India</li>
+                    <li><i class="fa fa-envelope-o"  style="padding-right: 10px;"></i><a href="mailto:jaisharma3010@gmail.com">jaisharma3010@gmail.com</a></li>
+                    <li><i class="fa fa-mobile"  style="padding-right: 20px;"></i><a href="tel:9729506380">Mobile : 9729506380</a></li>
                     <li><i class="fa fa-facebook-official"  style="padding-right: 10px;"></i>betalabsindia</li>
                 </ul>
             </section>
-        </article>
+        </section>
         <hr>
-        <section id="sign">
+        <section id="sec2">
             <p>Register for Free <a href="#">SIGN UP</a></p>
         </section>
         <hr>
-        <section id="foot">
+        <section id="sec3">
             <nav>
-                <a href="www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="www.google.com"><i class="fa fa-google" aria-hidden="true"></i></a>
-                <a href="www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="www.codepen.com"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+                <a id="f" href="www.facebook.com"><i class="fa fa-facebook" aria-hidden="true" style="padding: 5px 8px 5px 1px;"></i></a>
+                <a id="t" href="www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a id="g" href="www.google.com"><i class="fa fa-google" aria-hidden="true"></i></a>
+                <a id="l" href="www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a id="c" href="www.codepen.com"><i class="fa fa-codepen" aria-hidden="true"></i></a>
             </nav>
+        </section>
+        <section id="sec4">
+            <p>Copyright Ⓒ 2020 All rights Reserved by <b style="margin-left: 5px;">jaisharma18</b></p>
         </section>
     </footer>
 </body>
