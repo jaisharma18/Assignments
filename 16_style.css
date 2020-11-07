@@ -74,6 +74,10 @@ ul {
     font-size: 18px;
 }
 
+.check:hover, .delete:hover {
+    opacity: .3;
+}
+
 .delete {
     background-color: red;
 }
