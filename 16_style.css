@@ -1,0 +1,86 @@
+body {
+    background: linear-gradient(to right, rgb(160, 219, 238) 0%, rgb(14, 14, 236) 100%);
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 60px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 19%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: x-large;
+}
+
+#logo {
+    height: 42px;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: x-large;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+#logo:hover {
+    background-color: rgb(27, 156, 156);
+}
+
+#div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    min-width: 18%;
+}
+
+.todo {
+    margin: 10px;
+    background-color: rgb(212, 249, 255);
+    font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-items {
+    flex: 1;
+    margin: 0 8px;
+}
+
+.check, .delete {
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    background-color: rgb(0, 190, 0);
+    padding: 10px;
+    font-size: 18px;
+}
+
+.delete {
+    background-color: red;
+}
+
+.fa-check, .fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .3;
+}
