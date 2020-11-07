@@ -17,22 +17,23 @@ form {
 }
 
 input {
-    width: 19%;
-    height: 40px;
+    width: 22%;
+    height: 48px;
     border: none;
     outline: none;
     font-size: x-large;
-    padding: 0;
+    /* padding: 3px; */
 }
 
 #logo {
-    height: 40px;
+    height: 50px;
     border: none;
     outline: none;
     background-color: white;
     font-size: x-large;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: rgb(14, 14, 236);
 }
 
 #logo:hover {
