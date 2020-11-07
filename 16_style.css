@@ -22,10 +22,11 @@ input {
     border: none;
     outline: none;
     font-size: x-large;
+    padding: 0;
 }
 
 #logo {
-    height: 42px;
+    height: 40px;
     border: none;
     outline: none;
     background-color: white;
