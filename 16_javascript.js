@@ -29,14 +29,13 @@ function create(a) {
         newdiv.appendChild(deleteitem);
 
         todolist.appendChild(newdiv);
-        todoinput.value = ' ';
+        todoinput.value = '';
     }
 
     else {   
         a.preventDefault();
         alert("Input Field Can't Be Blanck");
     }
-
 }
 
 function buttons(b) {
