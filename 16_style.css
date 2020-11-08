@@ -49,6 +49,7 @@ input {
 ul {
     list-style: none;
     min-width: 18%;
+    padding-left: 0ch;
 }
 
 .todo {

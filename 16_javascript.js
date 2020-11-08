@@ -7,7 +7,6 @@ todolist.onclick = buttons;
 
 function create(a) {
     
-    
     if(todoinput.value.length > 0)
     {
         a.preventDefault();
