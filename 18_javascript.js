@@ -20,57 +20,56 @@ function nok(v1,v2,field){
  v1.classList.add('cross');
 }
 
-        var pa=/([\w \d])+([@]){1}([\w])+[.]{1}((com)|(co)|(in))$/;
-        var pa1=/[^a-z]/g;
-        // var pa2=/ /;
-        var btn=document.getElementById('btn');
-        btn.onclick=function(e){
+    var pa=/([\w \d])+([@]){1}([\w])+[.]{1}((com)|(co)|(in))$/;
+    var pa1=/[^a-z]/g;
+    var btn=document.getElementById('btn');
+    btn.onclick=function(e){
             
-            e.preventDefault();
+    e.preventDefault();
 
-            u.value.trim();
-            if(u.value === ''){
-                nok(user,user_msg,"Username");
-            }
-            else if(u.value.match(pa1)){
-                user.classList.remove('tick');
-                user_msg.innerHTML='Invalid Format';
-                user.classList.add('cross');
-            }
-            else{
-                user.classList.remove('cross')
-                user.classList.add('tick');
-            }
+    u.value.trim();
+    if(u.value === ''){
+        nok(user,user_msg,"Username");
+    }
+    else if(u.value.match(pa1)){
+        user.classList.remove('tick');
+        user_msg.innerHTML='Invalid Format';
+        user.classList.add('cross');
+    }
+    else{
+        user.classList.remove('cross')
+        user.classList.add('tick');
+    }
 
-            if(em.value === '')
-                nok(email,email_msg,"Email");
-            else if(!em.value.match(pa)){
-                email.classList.remove('tick');
-                email_msg.innerHTML='Invalid Format';
-                email.classList.add('cross');
-            }
-            else{
-                email.classList.remove('cross');
-                email.classList.add('tick');
-            }
+    if(em.value === '')
+        nok(email,email_msg,"Email");
+    else if(!em.value.match(pa)){
+        email.classList.remove('tick');
+        email_msg.innerHTML='Invalid Format';
+        email.classList.add('cross');
+    }
+    else{
+        email.classList.remove('cross');
+        email.classList.add('tick');
+    }
 
-            if(p.value === '')
-                nok(pass,pass_msg,"Password");
-            else{
-                pass.classList.remove('cross');
-                pass.classList.add('tick');
-            }
+    if(p.value === '')
+        nok(pass,pass_msg,"Password");
+    else{
+        pass.classList.remove('cross');
+        pass.classList.add('tick');
+    }
 
-            if(cpass.value === '')
-                nok(cp,cp_msg,"Confirm Password");
-            else if(p.value != cpass.value){
-                cp.classList.remove('tick');
-                cp.classList.add('cross');
-                cp_msg.innerHTML="Password did't match."
-            }
-            else{
-                cp.classList.remove('cross');
-                cp.classList.add('tick');
-            }
-        }
+    if(cpass.value === '')
+        nok(cp,cp_msg,"Confirm Password");
+    else if(p.value != cpass.value){
+        cp.classList.remove('tick');
+        cp.classList.add('cross');
+        cp_msg.innerHTML="Password did't match."
+    }
+    else{
+        cp.classList.remove('cross');
+        cp.classList.add('tick');
+    }
+}
 
