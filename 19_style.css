@@ -7,30 +7,59 @@ body {
     background-color: rgb(38, 222, 246);
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
+
+#step {
+    display: flex;
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2);
+    position: relative ;
+    padding: 15px 25px;
+}
+
+#dp {
+    position: absolute;
+    top: 00px;
+    left: .4px;
+    width: 125px;
+    height: 53px;
+    background-color: rgb(255, 0, 0);
+    transition: .4s
+}
+#dp::after {
+    content: '';
+    height: 0;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: -25px;
+    border-top: 26px  solid transparent;
+    border-bottom: 27px solid transparent;
+    border-left: 25px solid rgb(255, 0, 0);
+}
+.prog {
+    width: 125px;
+    font-size: 20px;
+    z-index: 1;
+    text-align: center;
+} 
 
 main {
     margin: 120px auto;
+    width: 375px;
+    background-color: white;
+    border-radius: 10px; 
+    overflow: hidden; 
+}   
+
+#content {
+    margin: 50px 35px 40px 45px;
 }
 
 p {
     font-size: 28px;
-    text-align: center;
-    padding-top: 25px;
     padding-bottom: 50px;
-}
-
-section {
-    background-color: white;
-    padding: 25px;
-    width: 400px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-form {
-    margin: 15px 5px 15px 25px;
+    text-align: center;
 }
 
 input {
@@ -45,7 +74,7 @@ input {
 
 #n1 {
     padding: 8px 30px;
-    margin: 15px auto;
+    margin: 25px auto;
     border-radius: 7px;
     outline: none;
     border: none;
@@ -57,18 +86,38 @@ input {
 
 #n2, #b1, #b2, #s {
     padding: 8px 30px;
-    margin: 25px 0 10px 45px;
+    margin: 25px 0 10px 27px;
     border-radius: 7px;
     outline: none;
     border: none;
     font-weight: 600;
     font-size: 15px;
     background-color: rgb(255, 0, 0);
+} 
+
+#content {
+    position: relative;
+    height: 283px;
 }
 
-#second, #first {
-    display: none;
+#per, #acc, #soc {
+    position: absolute;
+    top: 0px;
+    width: 100%; 
+    transition: .4s;
 }
+
+#acc { 
+    left: 0px;
+}
+
+#soc { 
+    right: -375px; 
+}
+
+#per { 
+    right: -750px;  
+} 
 
 @media (max-width:500px) {
     section {
@@ -80,6 +129,6 @@ input {
     }
 
     #n2, #b1, #b2, #s {
-        margin: 25px 0 10px 17px;
+        margin: 25px 0 10px 9px;
     }
-}
+} 
