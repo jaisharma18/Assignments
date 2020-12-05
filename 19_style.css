@@ -22,7 +22,7 @@ body {
     top: 00px;
     left: .4px;
     width: 125px;
-    height: 53px;
+    height: 57px;
     background-color: rgb(255, 0, 0);
     transition: .5s
 }
@@ -33,8 +33,8 @@ body {
     position: absolute;
     top: 0;
     right: -25px;
-    border-top: 26px  solid transparent;
-    border-bottom: 27px solid transparent;
+    border-top: 28px  solid transparent;
+    border-bottom: 29px solid transparent;
     border-left: 25px solid rgb(255, 0, 0);
 }
 .prog {
@@ -42,6 +42,7 @@ body {
     font-size: 20px;
     z-index: 1;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 } 
 
 main {
@@ -57,9 +58,10 @@ main {
 }
 
 p {
-    font-size: 28px;
+    font-size: 30px;
     padding-bottom: 50px;
     text-align: center;
+    font-family: 'Roboto Slab', serif;
 }
 
 input {
@@ -70,6 +72,7 @@ input {
     font-size: 17px;
     width: 96%;
     padding: 10px 0 10px 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #n1 {
