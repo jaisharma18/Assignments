@@ -121,17 +121,3 @@ input {
 #per { 
     right: -750px;  
 } 
-
-@media (max-width:500px) {
-    section {
-        width: fit-content;
-    }
-
-    main {
-        margin-top: 80px;
-    }
-
-    #n2, #b1, #b2, #s {
-        margin: 25px 0 10px 9px;
-    }
-} 
