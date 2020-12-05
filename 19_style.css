@@ -24,7 +24,7 @@ body {
     width: 125px;
     height: 53px;
     background-color: rgb(255, 0, 0);
-    transition: .4s
+    transition: .5s
 }
 #dp::after {
     content: '';
@@ -104,7 +104,7 @@ input {
     position: absolute;
     top: 0px;
     width: 100%; 
-    transition: .4s;
+    transition: .5s;
 }
 
 #acc { 
@@ -113,7 +113,7 @@ input {
 
 #soc { 
     right: -375px; 
-}
+} 
 
 #per { 
     right: -750px;  
